@@ -15,11 +15,11 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 BEIGE = (207, 185, 151)
 
-HAPPY = "tamagachi/gfx/happy.jpg"
-MID = "tamagachi/gfx/mid.jpg"
-SAD = "tamagachi/gfx/sad.png"
-DEAD = "tamagachi/gfx/dead.png"
-POO = "tamagachi/gfx/poo.png"
+HAPPY = "tamagotchi/gfx/happy.jpg"
+MID = "tamagotchi/gfx/mid.jpg"
+SAD = "tamagotchi/gfx/sad.png"
+DEAD = "tamagotchi/gfx/dead.png"
+POO = "tamagotchi/gfx/poo.png"
 
 # VARIABLES
 
