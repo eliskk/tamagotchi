@@ -1,2 +1,2 @@
-# tamagotchi
-tamagac
+# tamagachi
+tamagache
