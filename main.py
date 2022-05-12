@@ -16,7 +16,7 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 BEIGE = (207, 185, 151)
 
-DEAD = "gfx\\dead.png"           
+DEAD = ".\\gfx\\dead.png"           
 
 
 # INIT
@@ -52,7 +52,6 @@ egg = Tamagotchi.Tamagotchi()
 running = True
 while running:
 
-    
     clock.tick(FPS)     
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

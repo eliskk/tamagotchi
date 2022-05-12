@@ -53,13 +53,22 @@ class Tamagotchi:
         
     # Positives
     def feed(self):
-        self.hunger -= 1
+        if self.hunger <= 0: 
+            pass
+        else:
+            self.hunger -= 1
 
     def play(self):
-        self.boredness -= 1
+        if self.bored <= 0:
+            pass
+        else:
+            self.bored -= 1
 
     def clean(self):
-        self.poo_count -= 1
+        if self.poo_count <= 0:
+            pass
+        else:
+            self.poo_count -= 1
 
 
     def determine_mood(self): # returns "happy", "mid", "sad"

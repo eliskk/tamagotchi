@@ -37,4 +37,12 @@ def generate_order():
   
   return order_food
   
-print(generate_order())
+def read_input(pressed, order):
+
+    score = 0
+
+    for food in pressed:
+        if pressed[food] == order[food]:
+            score += 0.2
+    
+    return score
