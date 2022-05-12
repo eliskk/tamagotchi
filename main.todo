@@ -1,5 +1,9 @@
 =DO NOT MAKE BRANCHES THAT SHIT RUINED EVERYTHING=
 
-- [] fix gfx
+- [x] fix gfx
 - [] fix worsening
 - [] impelement mini games
+    -[] feed
+        - [] add errors
+    -[] play
+    -[] clean

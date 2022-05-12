@@ -1,0 +1,5 @@
+APPY = "gfx\\happy.png"
+MID = "gfx\\mid.png"
+SAD = "gfx\\sad.png"
+DEAD = "gfx\\dead.png"
+POO = "gfx\\poo.png"            

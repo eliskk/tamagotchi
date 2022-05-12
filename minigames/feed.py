@@ -7,15 +7,19 @@ EXAMPLE:
 
 80% correct click rate over 1 time => if hunger = 1 then hunger becomes 20% 
 (4/5)
-
 '''
-def generate_order(): # test run this
+
+# Add errors
+
+import random
+
+def generate_order():
   
   order_num = []
   order_food = []
   
-  for i in range(4):
-    order_num.append(random.randint(4))
+  for i in range(5):
+    order_num.append(random.randint(0,4))
   
   for food in order_num:
     
@@ -33,3 +37,4 @@ def generate_order(): # test run this
   
   return order_food
   
+print(generate_order())

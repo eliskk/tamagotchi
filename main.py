@@ -1,6 +1,7 @@
-import random
 from pyautogui import confirm
+import Tamagotchi
 import pygame
+import minigames.feed
 
 # CONSTANTS
 
@@ -15,90 +16,7 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 BEIGE = (207, 185, 151)
 
-HAPPY = "tamagotchi/gfx/happy.jpg"
-MID = "tamagotchi/gfx/mid.jpg"
-SAD = "tamagotchi/gfx/sad.png"
-DEAD = "tamagotchi/gfx/dead.png"
-POO = "tamagotchi/gfx/poo.png"
-
-# VARIABLES
-
-class Tamagotchi:
-
-    def __init__(self):
-        self.hunger = 0
-        self.bored = 0
-        self.poo_count = 0
-        self.mood = MID
-        self.dead = False
-
-        self.last_action = 3 # 0 = hunger, 1 = bored, 2 = poo
-    
-    def hungry(self):
-        self.hunger += 1
-
-    def get_bored(self):
-        self.bored += 1
-
-    def poo(self):
-        self.poo_count += 1
-
-    def die(self):
-        
-        if self.hunger > 10 or self.bored > 10 or self.poo_count > 10:
-            return True
-        elif self.hunger > 5 or self.bored > 5 or self.poo_count > 5:
-            return True
-        else:
-            return False
-        
-    def worsen(self):
-        
-        action = random.randint(0,2)
-        self.last_action = action
-
-        if action == 0:
-            self.hungry()
-        elif action == 1:
-            self.get_bored()
-        elif action == 2:
-            self.poo()
-
-        
-    # Positives
-    def feed(self):
-        self.hunger -= 1
-
-    def play(self):
-        self.boredness -= 1
-
-    def clean(self):
-        self.poo_count -= 1
-
-
-    def determine_mood(self): # returns "happy", "mid", "sad"
-        
-        negativity = self.hunger + self.poo_count + self.bored
-
-        if negativity <= 10:
-            return HAPPY
-        elif 20 > negativity > 10:
-            return MID
-        elif negativity > 20:
-            return SAD
-
-    def move(self):
-        playeraction = confirm("Action", "What action to take?", buttons=["Feed", "Play", "Clean"])
-
-        match playeraction:
-
-            case "Feed":
-                self.feed()
-            case "Play":
-                self.play()
-            case "Clean":
-                self.clean()
-            
+DEAD = "gfx\\dead.png"           
 
 
 # INIT
@@ -129,7 +47,7 @@ def faces(state, x, y):
 
 
 name = input("Name the child: ")
-egg = Tamagotchi()
+egg = Tamagotchi.Tamagotchi()
 
 running = True
 while running:
